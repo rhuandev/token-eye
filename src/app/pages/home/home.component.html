@@ -1,0 +1,47 @@
+<h2>Token eye</h2>
+<img src="../../../assets/img/eye.png" alt="" />
+<p class="eye">The eyes sees everything</p>
+
+<form (ngSubmit)="onSubmit()">
+  <label for="walletAddress" class="usernamelabel label">Wallet address:</label>
+  <input
+    type="text"
+    id="walletAddress"
+    [(ngModel)]="walletAddress"
+    name="walletAddress"
+    placeholder="Type wallet here"
+    required
+  />
+  <button type="submit">
+    <p>Get Tokens</p>
+  </button>
+</form>
+
+<h2>Token List</h2>
+<div *ngIf="!isLoading" class="main-container">
+  <p *ngIf="tokenService.tokenFinal.length == 0">
+    The eyes see that you have nothing.
+  </p>
+  <ul *ngIf="tokenService.tokenFinal.length > 0">
+    <hr />
+    <li *ngFor="let token of tokenService.tokenFinal">
+      <p><strong>Token addy:</strong> {{ token.tokenAddress }}</p>
+      <p><strong>Quantity of tokens:</strong> {{ token.tokenAmount }}</p>
+      <p *ngIf="token.tokenPriceX">
+        <strong>Price per token:</strong> ${{ token.tokenPriceX }}
+      </p>
+      <p *ngIf="token.tokenValue">
+        <strong>Total Value:</strong> ${{ token.tokenValue }}
+      </p>
+      <hr />
+    </li>
+  </ul>
+</div>
+
+<footer>
+  <p>
+    by rhutao.sol
+    <br />
+    Please, donate something, you cheap fuck.
+  </p>
+</footer>

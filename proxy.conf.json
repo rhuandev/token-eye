@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "https://api.metaplex.solana.com/",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/api" : ""}
+  }
+}

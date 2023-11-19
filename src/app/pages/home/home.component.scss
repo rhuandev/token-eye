@@ -1,0 +1,84 @@
+img {
+  width: 300px;
+}
+
+.eye {
+  margin-bottom: 30px;
+}
+
+form {
+  margin-bottom: 30px;
+  input {
+    margin-bottom: 15px;
+  }
+}
+
+.main-container {
+  ul {
+    li {
+      list-style-type: none;
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  outline: 1px dotted rgb(37, 37, 37);
+  outline-offset: -4px;
+  background: hsl(0deg 0% 75%);
+  box-shadow: inset -1px -1px #292929, inset 1px 1px #fff,
+    inset -2px -2px rgb(158, 158, 158), inset 2px 2px #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 5px 30px;
+
+  p {
+    font-weight: bold;
+    color: #292929;
+  }
+
+  &:active {
+    box-shadow: inset -1px -1px #fff, inset 1px 1px #292929,
+      inset -2px -2px #ffffff, inset 2px 2px rgb(158, 158, 158);
+  }
+}
+
+.walletAddress {
+  display: block;
+  font-size: 14px;
+  padding: 5px 5px;
+}
+
+#walletAddress {
+  display: block;
+  width: 200px;
+  height: 40px;
+  background-color: #292929;
+  border-radius: 30px;
+  border: 2px solid #292929;
+  padding: 0px 12px;
+  outline: none;
+  caret-color: rgb(152, 88, 255);
+  color: rgb(212, 212, 212);
+  font-size: 12px;
+  transition-duration: 0.2s;
+}
+
+#walletAddress:focus,
+#walletAddress:valid {
+  border: 2px solid rgb(152, 88, 255);
+  transition-duration: 0.2s;
+}
+
+footer {
+  position: fixed;
+  bottom: 20px;
+
+  p {
+    text-align: center;
+    font-size: 12px;
+  }
+}
